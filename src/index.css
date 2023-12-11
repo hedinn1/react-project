@@ -1,13 +1,222 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--lightgray);
+}
+.font-family {
+  font-family:'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --lightgray: rgb(244, 244, 244);
+  --lightblue: rgb(212, 222, 255);
+  --darkblue: rgb(36, 91, 180);
+}
+
+.font-darkblue {
+  color: var(--darkblue);
+}
+
+.border-darkblue {
+  border: 1px solid var(--darkblue);
+}
+
+.border-lightblue {
+  border: 1px solid var(--lightblue);
+}
+
+.page-container{
+  padding: 0 1.5em;
+  max-width: 60em;
+  margin: auto;
+}
+
+.padding-small {
+  padding: .6em;
+}
+
+img{
+  object-fit: cover;
+  width: 100%;
+}
+
+.logo {
+  height: 3em;
+}
+
+.max-width{
+  width: 100%;
+}
+.max-height{
+  height: 100%;
+}
+.background-lightgray {
+  background-color: var(--lightgray);
+}
+
+.font-bold{
+  font-weight: 900;
+}
+.font-regular{
+  font-weight: 500;
+}
+
+.date-input {
+  padding: .6em;
+}
+
+.font-light{
+  font-weight: 200;
+}
+.font-size-medium {
+  font-size: 1.4em;
+}
+
+.border-radius-small{
+  border-radius: 10px;
+}
+
+.border-radius-large{
+  border-radius: 20px;
+}
+.no-border {
+  border: none !important;
+}
+
+
+.text-input{
+  padding: .8em .6em;
+  background-color: var(--lightgray);
+  font-size: 1.4em;
+  color: var(--darkblue);
+  border: 1px solid var(--lightblue) ;
+  outline: none;
+}
+
+
+.text-input:focus{
+  border: 1px solid var(--darkblue) ;
+}
+
+
+header{
+  background-color: white;
+  padding: 1em;
+  align-items: center;
+  border-bottom: 1px solid var(--darkblue);
+  margin-bottom: 1.5em;
+}
+header > div{
+  justify-content: space-between;
+  margin: auto;
+  display: flex;
+  max-width: 60em;
+}
+button {
+  padding: .6em;
+  background-color: var(--lightgray);
+  color: var(--darkblue);
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'roboto';
+  transition: .2s ease;
+}
+
+a{
+  transition: .2s ease;
+}
+
+.flex{
+  display: flex;
+}
+.gap-small{
+  gap: .6em;
+}
+.gap-large{
+  gap: 1.2em;
+}
+
+.event-preview-img{
+  height: 12em;
+  border-radius: 20px 20px 0 0;
+}
+
+.event-container > img {
+  height: 30em;
+}
+
+.event-description{
+  line-height: 1.6em;
+}
+
+.grid{
+  display: grid;
+}
+
+.events-container a {
+  background-color: white;
+  text-decoration: none;
+}
+
+.event-stats > div{
+  background-color: var(--lightblue);
+  width: min-content;
+  text-wrap: nowrap;
+  padding: 1em;
+}
+.flex-column{
+  flex-direction: column;
+}
+
+.ReactModal__Content {
+  max-width: 20em;
+  height: min-content;
+  margin: auto;
+  border: 1px solid var(--lightblue) !important;
+  padding: 2em !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+}
+
+.no-margin{
+  margin: 0;
+}
+
+.event-details{
+  padding: 0 1.2em;
+}
+
+.profile-container > img {
+  height: 14em;
+  width: 14em;
+  border-radius: 50%;
+}
+button:hover, .events-container a:hover{
+  cursor: pointer;
+  box-shadow: 0 0 0 2px  var(--darkblue);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4em 0;
+}
+
+footer img{
+  height: 4em;
+  object-fit: contain;
+}
+
+@media only screen and (min-width: 768px) {
+  .two-row-grid{
+    grid-template-columns: 1fr 1fr;
+    
+  }
 }
